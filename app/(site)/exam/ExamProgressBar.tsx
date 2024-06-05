@@ -17,5 +17,10 @@ export default function ExamProgressBar({ currentStep, totalSteps }: Props) {
     }
     steps.push(<div key={i} className={`h-[5px] grow ${bgColor}`}></div>)
   }
-  return <div className="flex gap-2 mb-4">{steps}</div>;
+  return (
+    <div>
+      <div>Completed: {currentStep}/{totalSteps}</div>
+      <div className="flex gap-2 mb-4">{steps}</div>
+    </div>
+  );
 }

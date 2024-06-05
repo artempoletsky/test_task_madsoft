@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useStore } from "../store";
 import ExamProgressBar from "./ExamProgressBar";
 import TicketSwitch from "./ticket/TicketSwitch";
-import { Button } from "@mantine/core";
+import { Button, Loader } from "@mantine/core";
 import ExamCompleted from "./ExamCompleted";
 
 export default function PageExam() {
@@ -22,7 +22,9 @@ export default function PageExam() {
     setExamAnswers([...examAnswers, currentAnswers]);
   }
 
-  if (currentExamStep == examTickets.length) return <ExamCompleted />
+  if (!examTickets.length) return <Loader type="dots" />;
+
+  if (currentExamStep == examTickets.length) return <ExamCompleted />;
 
   return (<div className="p-4">
     <ExamProgressBar totalSteps={examTickets.length} currentStep={currentExamStep} />

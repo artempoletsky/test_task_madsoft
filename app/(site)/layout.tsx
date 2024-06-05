@@ -19,7 +19,11 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://unpkg.com/@mantine/core@7.7.1/styles.layer.css" />
       </head>
-      <body className={`${inter.className} min-h-[100vw]`}>{children}</body>
+      <body className={`${inter.className} min-h-[100vw]`}>
+        <div className="pt-5 max-w-[1280px] px-3 mx-auto">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
