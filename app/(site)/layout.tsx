@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="stylesheet" href="https://unpkg.com/@mantine/core@7.7.1/styles.layer.css" />
+      </head>
+      <body className={`${inter.className} min-h-[100vw]`}>{children}</body>
     </html>
   );
 }
