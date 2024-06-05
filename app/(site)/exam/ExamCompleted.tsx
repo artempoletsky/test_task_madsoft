@@ -13,7 +13,7 @@ export default function ExamCompleted() {
   // we can print here exam answers if we want
   return (
     <div>
-      <p className="">Congratulations you've completed the exam!</p>
+      <p className="">Congratulations you&apos;ve completed the exam!</p>
       <Button onClick={resetStore}>Start anew</Button>
     </div>
   );
